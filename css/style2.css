@@ -1,0 +1,178 @@
+.open-nav-mobile {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .open-nav-mobile {
+    display: block;
+  }
+}
+
+.full-nav-mobile {
+  background-color: #f01919;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+
+/* Nav menu container */
+.nav-content-mobile {
+  width: 100%;
+  height: 100%;
+  padding: 140px 20px 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.nav-content-mobile h3 {
+  margin-bottom: 4rem;
+  color: #fff;
+  width: 40%;
+}
+
+/* Main Menu --menu */
+.nav-menu-mobile {
+  list-style: none;
+  height: calc(100% - 8rem);
+  width: 100%;
+  position: relative;
+}
+
+.nav-menu::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.nav-menu-item-mobile {
+  font-size: 20px;
+}
+
+.nav-menu-item-mobile:last-child {
+  margin-bottom: 5rem;
+}
+
+.nav-menu-item-mobile a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+/* .nav-menu-item-mobile > a {
+  opacity: 0;
+  visibility: hidden;
+} */
+.nav-menu-link-mobile {
+  position: relative;
+}
+.nav-menu-link-mobile svg {
+  width: 20px !important;
+  height: 18px;
+  color: #fff;
+  /* position: absolute; */
+  /* top: 1.4rem; */
+  /* right: 0; */
+}
+
+/* Nav sub menu */
+.nav-menu-sublist-mobile {
+  list-style-type: none;
+  width: 100%;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-menu-back-mobile svg {
+  width: 20px !important;
+  height: 18px;
+  color: #fff;
+}
+.asdf {
+  content: "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+";
+}
+/* Nav Close button */
+.nav-close-mobile {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 32px;
+  overflow: hidden;
+  color: black;
+}
+
+.nav-close-mobile:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.nav-close-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-close-icon-hidden {
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+
+.nav-close-mobile:hover .nav-close-icon {
+  transform: translateY(100%);
+  transition: transform var(--time) ease;
+}

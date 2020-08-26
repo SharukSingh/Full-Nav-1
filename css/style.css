@@ -15,7 +15,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99;
   transform-origin: left;
   transform: scaleX(0);
 }
@@ -220,8 +220,35 @@
   transition: transform var(--time) ease;
 }
 
+/* Action Container */
+.action-container {
+  background-color: aliceblue;
+
+  /* height: 100%; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 100%; */
+  z-index: 999;
+
+  width: 90%;
+  font-size: 1.4rem;
+  position: absolute;
+  top: -7rem;
+  left: 180%;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+
+  height: calc(100vh - 8rem);
+}
+
 /* For Mobile view */
 @media screen and (max-width: 576px) {
+  .full-nav {
+    display: none;
+  }
+  .open-nav-desktop {
+    display: none;
+  }
   .nav-image-container {
     display: none !important;
   }

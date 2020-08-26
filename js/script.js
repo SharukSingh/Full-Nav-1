@@ -148,4 +148,3 @@ menuLinks.forEach(link => {
 
 navCloseButton.addEventListener('click', closeNav);
 
-openNav();
