@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata";
+  --time: 0.4s;
+}
+
+/* Nav container */
+.full-nav {
+  height: 100vh;
+  background-color: #f01919;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* Nav menu container */
+.nav-content {
+  width: 80%;
+  height: 100%;
+  padding: 7rem 2rem 1rem 8rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.nav-content::-webkit-scrollbar {
+  width: 0;
+}
+
+.nav-content h3 {
+  margin-bottom: 4rem;
+  color: #fff;
+  width: 40%;
+}
+
+/* Main Menu --menu */
+.nav-menu {
+  list-style: none;
+  height: calc(100% - 8rem);
+  width: 40%;
+  position: relative;
+}
+
+.nav-menu::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.nav-menu-item {
+  font-size: 2.5rem;
+}
+
+.nav-menu-item:last-child {
+  margin-bottom: 5rem;
+}
+
+.nav-menu-item a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 1.1rem 0;
+  position: relative;
+  transition: color var(--time) ease; /* for hover */
+}
+
+.nav-menu-item > a {
+  opacity: 0;
+  visibility: hidden;
+}
+.nav-menu-link {
+  /* border: 1px solid blue; */
+}
+.nav-menu-link svg {
+  width: 20px !important;
+  height: 18px;
+  color: #fff;
+  position: absolute;
+  top: 2.5rem;
+  left: -10%;
+  transform-origin: center;
+  opacity: 0;
+}
+
+.nav-menu.hovered .nav-menu-item .nav-menu-link a {
+  color: #cf1117 !important;
+}
+
+.nav-menu.hovered .nav-menu-item a:hover {
+  color: #fff !important;
+}
+
+.nav-menu.active .nav-menu-item .nav-menu-link a {
+  color: #cf1117 !important;
+}
+
+.nav-menu.active .nav-menu-item .nav-menu-link.active a {
+  color: #fff !important;
+}
+
+.nav-menu.active .nav-menu-item .nav-menu-link a:hover {
+  color: #fff !important;
+}
+
+/* Nav sub menu */
+.nav-menu-sublist {
+  list-style-type: none;
+  width: 90%;
+  font-size: 1.4rem;
+  position: absolute;
+  top: -7rem;
+  left: 120%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 8rem);
+}
+
+.nav-menu-sublist::-webkit-scrollbar {
+  width: 0;
+}
+
+.nav-menu-sublist.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-menu-sublist.hovered li a {
+  color: #cf1117;
+}
+
+.nav-menu-sublist li a:hover {
+  color: #fff;
+}
+
+/* Nav image container */
+.nav-image-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-image-item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: none;
+}
+
+.nav-image-default {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.nav-image-item.active {
+  display: block;
+}
+
+/* Blocker for image reveal */
+.blocker {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #f01919;
+  transform-origin: -100% 50%;
+}
+
+/* Nav Close button */
+.nav-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 32px;
+  overflow: hidden;
+  color: black;
+}
+
+.nav-close:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.nav-close-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-close-icon-hidden {
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+
+.nav-close:hover .nav-close-icon {
+  transform: translateY(100%);
+  transition: transform var(--time) ease;
+}
+
+/* For Mobile view */
+@media screen and (max-width: 576px) {
+  .nav-image-container {
+    display: none !important;
+  }
+
+  /* Nav menu container */
+  .nav-content {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    padding-top: 6rem;
+  }
+
+  /* Main Menu --menu */
+  .nav-menu {
+    width: 50%;
+  }
+
+  /* Nav sub menu */
+  .nav-menu-sublist {
+    list-style-type: none;
+    width: 100%;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -10rem;
+    left: 160%;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

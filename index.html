@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Nav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button onclick="openNav()">Open Nav</button>
+
+    <div class="full-nav">
+        <a class="nav-close" href="#">
+            <div class="nav-close-icon nav-close-icon-hidden">
+                &times;
+            </div>
+            <div class="nav-close-icon">
+                &times;
+            </div>
+        </a>
+
+        <div class="nav-content">
+            <h3>New</h3>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Earthmoving</a>
+                    </div>
+                    <ul data-sub-menu="image1" class="nav-menu-sublist">
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Levels and measures</a></li>
+                        <li><a href="#">Loader</a></li>
+                        <li><a href="#">All products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Elevation and Scaffolding</a>
+                    </div>
+                    <ul data-sub-menu="image2" class="nav-menu-sublist">
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Energy and HVAC</a>
+                    </div>
+                    <ul data-sub-menu="image3" class="nav-menu-sublist">
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                        <li><a href="#">Compaction</a></li>
+                        <li><a href="#">Conveyor</a></li>
+                        <li><a href="#">Excavation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Handling</a>
+                    </div>
+                    <ul data-sub-menu="image4" class="nav-menu-sublist">
+                        <li><a href="#">asdf Sublist 1.1</a></li>
+                        <li><a href="#">asdf Sublist 2.1</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image5">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Landscaping</a>
+                    </div>
+                    <ul data-sub-menu="image5" class="nav-menu-sublist">
+                        <li><a href="#">asdf Sublist 1.1</a></li>
+                        <li><a href="#">asdf Sublist 2.1</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image6">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Specialized tooling</a>
+                    </div>
+                    <ul data-sub-menu="image6" class="nav-menu-sublist">
+                        <li><a href="#">asdf Sublist 1.1</a></li>
+                        <li><a href="#">asdf Sublist 2.1</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <div class="nav-menu-link" data-image="image7">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            id="icon-chevron" viewBox="0 0 12 11" preserveAspectRatio="none" x="0" y="0">
+                            <path d="M0 0v11h8.326L12 5.5 8.327 0z" fill="#fff" />
+                        </svg>
+                        <a href="#">Working with Materials</a>
+                    </div>
+                    <ul data-sub-menu="image7" class="nav-menu-sublist">
+                        <li><a href="#">asdf Sublist 1.1</a></li>
+                        <li><a href="#">asdf Sublist 2.1</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="nav-image-container">
+            <div class="blocker">
+                <img class="nav-image-default" src="images/imagedefault.jpg" alt="">
+            </div>
+            <img class="nav-image-item" data-image="image2" src="images/image2.jpg" alt="">
+            <img class="nav-image-item" data-image="image1" src="images/image1.jpg" alt="">
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
