@@ -25,6 +25,9 @@ const subMenus = document.querySelectorAll('.nav-menu-sublist');
 // submenu links
 const subMenuLinks = document.querySelectorAll('.nav-menu-sublist a');
 
+// action container
+const actionContainers = document.querySelectorAll('.action-container');
+
 // nav close button
 const navCloseButton = document.querySelector('.nav-close');
 
@@ -35,7 +38,7 @@ const testtime = 2;
 
 function changeImage() {
     let imageTag = this.dataset.image;
-    // gsap.killTweensOf(blocker)
+    gsap.killTweensOf(blocker)
     gsap.fromTo(blocker, { clipPath: 'inset(0% 0% 0% 0%)', webkitClipPath: 'inset(0% 0% 0% 0%)' },
         { clipPath: 'inset(0% 0% 0% 100%)', webkitClipPath: 'inset(0% 0% 0% 100%)', duration: 0.75, ease: "sine.inOut" })
     navImages.forEach(function (image) {
@@ -57,7 +60,7 @@ function hoverMenuLeave(e) {
 function mainMenuClick(e) {
     e.preventDefault();
     //move all menu to left, title to left
-    gsap.to(menu, { x: -40, duration: time, ease: "sine.inOut" });
+    gsap.to(menu, { left: -40, duration: time, ease: "sine.inOut" });
     gsap.to(menuTitle, { x: -40, duration: time, ease: "sine.inOut" });
     gsap.to(navImageContainer, { width: "34%", duration: time, ease: "sine.inOut" });
     menu.classList.add('active');
@@ -90,11 +93,23 @@ function mainMenuClick(e) {
         if (submenu.dataset.subMenu == currentItem) {
             submenu.classList.add('active');
             let activeSubMenu = submenu.querySelectorAll('a');
-            gsap.fromTo(activeSubMenu, { x: 20 }, { x: 0, duration: 0.3, ease: "sine.inOut", stagger: 0.1 });
+            gsap.fromTo(activeSubMenu, { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "sine.inOut", stagger: 0.1 });
             submenu.addEventListener('mouseover', hoverMenuEnter);
             submenu.addEventListener('mouseleave', hoverMenuLeave);
         }
     });
+
+    // show action container
+    actionContainers.forEach(actionContainer => {
+        // hide all containers
+        gsap.to(actionContainer, { opacity: 0, visibility: 'hidden', duration: time, ease: ease1 });
+        // show active container
+        if (actionContainer.dataset.actionContainer == currentItem) {
+            gsap.fromTo(actionContainer,
+                { opacity: 0, x: 40, visibility: 'hidden' },
+                { opacity: 1, x: 0, visibility: 'visible', duration: 0.3, ease: ease1, delay: time * 2 });
+        }
+    })
 }
 
 function resetNav() {
@@ -104,8 +119,10 @@ function resetNav() {
     //hide submenu
     subMenus.forEach(submenu => submenu.classList.remove('active'));
     //main menu reset
-    gsap.to(menu, { x: 0, duration: 0, ease: "sine.inOut" });
+    gsap.to(menu, { left: 0, duration: 0, ease: "sine.inOut" });
     menu.classList.remove('active');
+    // action container reset
+    actionContainers.forEach(actionContainer => actionContainer.style.opacity = '0');
 
     menuLinks.forEach(link => {
         gsap.to(link, { x: 0, duration: time, ease: "sine.inOut" });
